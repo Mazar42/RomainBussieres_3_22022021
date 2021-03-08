@@ -1,0 +1,19 @@
+{
+  "name": "romainbussieres_3_22022021",
+  "version": "1.0.0",
+  "description": "package for ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass":"sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mazar42/RomainBussieres_3_22022021.git"
+  },
+  "author": "Mazar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mazar42/RomainBussieres_3_22022021/issues"
+  },
+  "homepage": "https://github.com/Mazar42/RomainBussieres_3_22022021#readme"
+}

@@ -1,3 +1,25 @@
-#blocpage{
-    background: #000;
-}
+/* utils imports*/
+
+@import "./utils/reset.scss";
+@import "./utils/variables";
+@import "./utils/fonctions";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+/* base imports*/
+
+@import "./base/fonts";
+@import "./base/text-styles";
+
+/*components imports*/
+
+@import "./components/buttons";
+
+/*Layout imports*/
+
+@import "./layout/footer";
+@import "./layout/header";
+
+/*Pages imports*/
+
+@import "./page/accueil";
