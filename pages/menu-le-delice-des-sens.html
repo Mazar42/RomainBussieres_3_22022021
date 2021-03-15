@@ -13,25 +13,25 @@
         <title>ohmyfood</title>
     </head>
     <body>
-        <div id: blocpage>
-            <header>
-                <i class="fas fa-arrow-left"></i>
+        <div id="blocpage">
+            <header class="menu-header">
+                <a href="../index.html"><i class="fas fa-arrow-left fa-lg"></i></a>
                 <h1><a href="#">ohmyfood</a></h1>
             </header>
             <div class="img-header-le-delice-des-sens"></div>
-            <section>
+            <section class="menu-restaurant">
                 <div class="entete">
-                    <h2>Le délice des sens</h2>
-                    <i class="far fa-heart"></i>
+                    <h2 class="nom-restaurant">Le délice des sens</h2>
+                    <i class="far fa-heart fa-lg"></i>
                 </div>
-                <h4>entrées</h4>
+                <h3>entrées</h3>
                 <ul>
                     <li>
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Tartare de thon</h5>
-                                    <div class="description">
+                                    <h4>Tartare de thon</h4>
+                                    <div class="course-description">
                                         <p>Assaisoné au yuzu</p>
                                         <p class="price">25€</p>
                                     </div>
@@ -47,8 +47,8 @@
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Bouchée de homard croustillant</h5>
-                                    <div class="description">
+                                    <h4>Bouchée de homard croustillant</h4>
+                                    <div class="course-description">
                                         <p>Et sa farandolle de petit légumes</p>
                                         <p class="price">35€</p>
                                     </div>
@@ -64,8 +64,8 @@
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Velouté de cèpes</h5>
-                                    <div class="description">
+                                    <h4>Velouté de cèpes</h4>
+                                    <div class="course-description">
                                         <p>Aux truffes</p>
                                         <p class="price">20€</p>
                                     </div>
@@ -77,14 +77,14 @@
                         </a>
                     </li>
                 </ul>
-                <h4>plats</h4>
+                <h3>plats</h3>
                 <ul>
                     <li>
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Poulet rôti aux herbes de provence</h5>
-                                    <div class="description">
+                                    <h4>Poulet rôti aux herbes de provence</h4>
+                                    <div class="course-description">
                                         <p>Et sa crème de truffe</p>
                                         <p class="price">40€</p>
                                     </div>
@@ -99,8 +99,8 @@
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Langouste rôtie</h5>
-                                    <div class="description">
+                                    <h4>Langouste rôtie</h4>
+                                    <div class="course-description">
                                         <p>Et ses légumes de saison</p>
                                         <p class="price">35€</p>
                                     </div>
@@ -115,8 +115,8 @@
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Côte de boeuf angus</h5>
-                                    <div class="description">
+                                    <h4>Côte de boeuf angus</h4>
+                                    <div class="course-description">
                                         <p>Et sa purée de panais</p>
                                         <p class="price">44€</p>
                                     </div>
@@ -128,14 +128,14 @@
                         </a>
                     </li>
                 </ul>
-                <h4>desserts</h4>
+                <h3>desserts</h3>
                 <ul>
                     <li>
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Farandole de desserts</h5>
-                                    <div class="description">
+                                    <h4>Farandole de desserts</h4>
+                                    <div class="course-description">
                                         <p>Du chef</p>
                                         <p class="price">18€</p>
                                     </div>
@@ -150,8 +150,8 @@
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Crème brûlée</h5>
-                                    <div class="description">
+                                    <h4>Crème brûlée</h4>
+                                    <div class="course-description">
                                         <p>Revisitée</p>
                                         <p class="price">22€</p>
                                     </div>
@@ -166,8 +166,8 @@
                         <a class="course-select" href="#">
                             <div class="course-card">
                                 <div class="left-section">
-                                    <h5>Tiramisu</h5>
-                                    <div class="description">
+                                    <h4>Tiramisu</h4>
+                                    <div class="course-description">
                                         <p>À la noisette</p>
                                         <p class="price">23€</p>
                                     </div>
@@ -179,21 +179,22 @@
                         </div>
                     </a>
                 </ul>
-
-                <button class="btnstyle"
-                    type="button">
-                    Commander
-                </button>
+                <div class="bouton-commander">
+                    <button class="btnstyle-order"
+                        type="button">
+                        Commander
+                    </button>
+                </div>
             </section>
         </div>
 
         <footer>
-            <p>ohmyfood</p>
+            <h5>ohmyfood</h5>
             <ul>
-                <li>Proposer un restaurant</li>
-                <li>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>contact</li>
+                <li><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                <li><a href="#"><i class="fas fa-hands-helping fa-xs"></i> Devenir partenaire</a></li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </footer>
         <script src="https://kit.fontawesome.com/ec342d9b50.js" crossorigin="anonymous"></script>

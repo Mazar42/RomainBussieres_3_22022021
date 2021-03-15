@@ -1,5 +1,19 @@
-header{
-    font-size: 2rem;
+.menu-header{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    .fa-lg {
+        margin-top: 18px;
+        color: $footer-color;
+    }
+}
+
+.accueil-header {
+    padding: 10px;
     text-align: center;
-    padding: 20px;
 }

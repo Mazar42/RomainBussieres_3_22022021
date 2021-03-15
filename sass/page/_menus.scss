@@ -1,0 +1,103 @@
+.menu-restaurant{
+    margin-top: -20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color:white;
+    padding-top: 25px;
+
+    h5 {
+        font-weight: bold;
+    }
+    
+
+    li {
+        .left-section{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    section {
+            padding-left: 10px;
+            background: rgb(251, 251, 251);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+    }     
+}
+
+.entete {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
+
+    .fa-lg {
+        -webkit-text-stroke: 1px white;
+        font-size: 1.4rem;
+        padding: 8px;
+    }
+}
+/*cartes plats pages menu*/
+
+.course-card {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 30px;
+        width: 90%;
+        height: 68px;
+        box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);  
+        margin: 10px auto;  
+        overflow: hidden;
+         
+        &:hover .right-section {
+            margin-right: 0;
+        }
+
+        &:hover .left-section {
+            width: 80%;
+        }
+    }
+
+.left-section{
+    width: 100%;
+    padding: 10px;
+
+    .course-description {
+        padding-top: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & p:first-child { 
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    p{
+        font-weight: 300;
+    }
+
+    .price{
+        padding: 0px 10px;
+        font-weight: bold;
+        color: $price-color;
+    }
+}
+
+.right-section {
+    font-size: 1.5rem;
+    color: white;
+    background-color: $tertiary-color;
+    text-align: center;
+    padding-top: 20px;
+    width: 80px;
+    margin-right: -80px;
+    transition: all 0.4s;
+}
+
+.bouton-commander{
+    text-align: center;
+    margin-top: 40px;
+}

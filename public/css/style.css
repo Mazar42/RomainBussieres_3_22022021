@@ -45,7 +45,7 @@ td, th {
 }
 
 /* base imports*/
-h1, h5 {
+h1, h5, .nom-restaurant {
   font-family: Shrikhand;
 }
 
@@ -58,20 +58,55 @@ a {
   color: black;
 }
 
+h1 {
+  font-size: 2.2rem;
+}
+
 h2 {
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
 }
 
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font-weight: bold;
+}
+
+.nom-restaurant {
+  font-weight: 500;
+}
+
+.menu-restaurant h3 {
+  padding-top: 35px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 /*components imports*/
 .btnstyle {
   border-radius: 100px;
-  background-color: #da6dda;
+  background: linear-gradient(to bottom, #e872da, #a55bdb);
   color: white;
-  padding: 15px;
+  padding: 15px 25px;
   border-style: hidden;
-  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
+  box-shadow: -6px 6px 13px 0px rgba(0, 0, 0, 0.247);
+}
+
+.btnstyle-order {
+  border-radius: 100px;
+  background: linear-gradient(to bottom, #e872da, #a55bdb);
+  color: white;
+  padding: 15px 50px;
+  border-style: hidden;
+  box-shadow: -6px 6px 13px 0px rgba(0, 0, 0, 0.247);
 }
 
 /*Layout imports*/
@@ -79,18 +114,73 @@ footer {
   color: white;
   background-color: #353535;
   padding: 20px 0px 40px 20px;
+  margin-top: 60px;
 }
-footer p {
+footer a {
+  color: white;
+}
+footer h5 {
   padding-bottom: 10px;
+  font-size: 1.3rem;
 }
 footer li {
-  line-height: 25px;
+  line-height: 30px;
+}
+footer i {
+  padding-right: 7px;
+}
+footer .fa-xs {
+  padding-right: 5px;
 }
 
-header {
-  font-size: 2rem;
+.menu-header {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+.menu-header h1 {
+  margin: 0 auto;
+}
+.menu-header .fa-lg {
+  margin-top: 18px;
+  color: #353535;
+}
+
+.accueil-header {
+  padding: 10px;
   text-align: center;
-  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+.img-header-palette-du-gout {
+  background-image: url("../../pictures/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+.img-header-le-delice-des-sens {
+  background-image: url("../../pictures/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+.img-header-a-la-francaise {
+  background-image: url("../../pictures/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+}
+
+.img-header-note-enchantee {
+  background-image: url("../../pictures/stil-u2Lp8tXIcjw-unsplash.jpg");
+  width: 100%;
+  height: 250px;
+  background-size: cover;
 }
 
 /*Pages imports*/
@@ -99,6 +189,7 @@ header {
   background: #eaeaea;
   height: 50px;
   padding-top: 15px;
+  box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.247);
 }
 
 .hat {
@@ -122,6 +213,52 @@ header {
   background-color: #f6f6f6;
 }
 
+ol {
+  list-style: none;
+  counter-reset: item;
+}
+ol li:after {
+  background: #9356DC;
+  content: counter(item);
+  border-radius: 100%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: -10px;
+  font-size: 12px;
+  color: white;
+  line-height: 20px;
+}
+ol li {
+  width: 80%;
+  height: 65px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  margin: 30px auto;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
+  text-align: center;
+  padding-top: 25px;
+  font-weight: 500;
+  counter-increment: item;
+  position: relative;
+  transition: all 0.4s;
+}
+ol li:hover {
+  cursor: pointer;
+  background: #e4d5f6;
+}
+ol li i {
+  padding-right: 40px;
+  color: #7e7e7e;
+}
+ol li .fa-lg {
+  padding-left: 10px;
+}
+ol li .purple-icon {
+  color: #9356DC;
+}
+
 .resultcard {
   background-color: white;
   border-radius: 10px;
@@ -142,6 +279,111 @@ header {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+.resultcard figcaption {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.resultcard figcaption h4 {
+  padding-bottom: 3px;
+}
+.resultcard figcaption .heart {
+  -webkit-text-stroke: 1px white;
+  font-size: 1.7rem;
+  padding-right: 10px;
+}
+
+.menu-restaurant {
+  margin-top: -20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: white;
+  padding-top: 25px;
+}
+.menu-restaurant h5 {
+  font-weight: bold;
+}
+.menu-restaurant li .left-section {
+  display: flex;
+  flex-direction: column;
+}
+.menu-restaurant section {
+  padding-left: 10px;
+  background: #fbfbfb;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.entete {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+}
+.entete .fa-lg {
+  -webkit-text-stroke: 1px white;
+  font-size: 1.4rem;
+  padding: 8px;
+}
+
+/*cartes plats pages menu*/
+.course-card {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  width: 90%;
+  height: 68px;
+  box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
+  margin: 10px auto;
+  overflow: hidden;
+}
+.course-card:hover .right-section {
+  margin-right: 0;
+}
+.course-card:hover .left-section {
+  width: 80%;
+}
+
+.left-section {
+  width: 100%;
+  padding: 10px;
+}
+.left-section .course-description {
+  padding-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.left-section .course-description p:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.left-section p {
+  font-weight: 300;
+}
+.left-section .price {
+  padding: 0px 10px;
+  font-weight: bold;
+  color: #424242;
+}
+
+.right-section {
+  font-size: 1.5rem;
+  color: white;
+  background-color: #99E2D0;
+  text-align: center;
+  padding-top: 20px;
+  width: 80px;
+  margin-right: -80px;
+  transition: all 0.4s;
+}
+
+.bouton-commander {
+  text-align: center;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
