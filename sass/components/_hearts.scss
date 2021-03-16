@@ -1,0 +1,24 @@
+.heart{
+
+    font-size: 1.4rem;
+
+    .fa-stack-1x{
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 500ms linear;
+        color: $primary-color;
+        
+    }
+
+    .fa-stack-2x{
+        font-size: 1.5rem;
+        -webkit-text-stroke: 1px white;
+        margin-top: 10.5px;
+    }
+
+    &:hover .fa-stack-1x{
+            visibility: visible;
+            opacity: 1;
+
+    }
+}

@@ -28,6 +28,9 @@
 
 .restaurants {
     background-color: $light-bg-color;
+    margin-bottom: 0;
+    padding-bottom: 60px;
+    padding-top: 40px;
 }
  ol {
         list-style: none;
@@ -64,6 +67,10 @@
          &:hover {
              cursor: pointer;
              background: lighten($primary-color, 30);
+             
+             .purple-icon{
+             color: $primary-color;
+             }
          }
 
          i {
@@ -75,11 +82,10 @@
              padding-left: 10px;
          }
 
-         .purple-icon{
-             color: $primary-color;
-         }
+         
      }
  }
+
 .resultcard{
     background-color: white;
     border-radius: 10px;
@@ -88,7 +94,7 @@
     width: 90%;
     height: 250px;
     box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);  
-    margin: 10px auto;
+    margin: 15px auto;
 
     .imgresult{
         overflow: hidden;
@@ -113,9 +119,53 @@
         }
 
         .heart{
-            -webkit-text-stroke: 1px white;
-            font-size: 1.7rem;
-            padding-right: 10px;
+
+            font-size: 1.4rem;
+
+            .fa-stack-1x{
+                visibility: hidden;
+                opacity: 0;
+                transition: visibility 0s, opacity 500ms linear;
+                color: $primary-color;
+                
+            }
+
+            .fa-stack-2x{
+                font-size: 1.5rem;
+                -webkit-text-stroke: 1px white;
+                margin-top: 10.5px;
+            }
+
+            &:hover .fa-stack-1x{
+                    visibility: visible;
+                    opacity: 1;
+        
+            }
         }
+    }
+}
+
+@media all and (min-width : 950px){
+
+    ol{
+        display: flex;
+
+        li{
+            max-width: 300px;
+        }
+    }
+
+    .restaurants{
+
+        .results{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        }
+    }
+
+    .resultcard{
+        max-width: 350px;
+        height: 240px;
     }
 }

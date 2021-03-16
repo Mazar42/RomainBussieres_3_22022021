@@ -114,7 +114,6 @@ footer {
   color: white;
   background-color: #353535;
   padding: 20px 0px 40px 20px;
-  margin-top: 60px;
 }
 footer a {
   color: white;
@@ -152,7 +151,7 @@ footer .fa-xs {
 }
 
 section {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .img-header-palette-du-gout {
@@ -211,6 +210,9 @@ section {
 
 .restaurants {
   background-color: #f6f6f6;
+  margin-bottom: 0;
+  padding-bottom: 60px;
+  padding-top: 40px;
 }
 
 ol {
@@ -248,15 +250,15 @@ ol li:hover {
   cursor: pointer;
   background: #e4d5f6;
 }
+ol li:hover .purple-icon {
+  color: #9356DC;
+}
 ol li i {
   padding-right: 40px;
   color: #7e7e7e;
 }
 ol li .fa-lg {
   padding-left: 10px;
-}
-ol li .purple-icon {
-  color: #9356DC;
 }
 
 .resultcard {
@@ -267,7 +269,7 @@ ol li .purple-icon {
   width: 90%;
   height: 250px;
   box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.247);
-  margin: 10px auto;
+  margin: 15px auto;
 }
 .resultcard .imgresult {
   overflow: hidden;
@@ -289,11 +291,43 @@ ol li .purple-icon {
   padding-bottom: 3px;
 }
 .resultcard figcaption .heart {
+  font-size: 1.4rem;
+}
+.resultcard figcaption .heart .fa-stack-1x {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 500ms linear;
+  color: #9356DC;
+}
+.resultcard figcaption .heart .fa-stack-2x {
+  font-size: 1.5rem;
   -webkit-text-stroke: 1px white;
-  font-size: 1.7rem;
-  padding-right: 10px;
+  margin-top: 10.5px;
+}
+.resultcard figcaption .heart:hover .fa-stack-1x {
+  visibility: visible;
+  opacity: 1;
 }
 
+@media all and (min-width: 950px) {
+  ol {
+    display: flex;
+  }
+  ol li {
+    max-width: 300px;
+  }
+
+  .restaurants .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .resultcard {
+    max-width: 350px;
+    height: 240px;
+  }
+}
 .menu-restaurant {
   margin-top: -20px;
   border-top-left-radius: 20px;
@@ -308,7 +342,7 @@ ol li .purple-icon {
   display: flex;
   flex-direction: column;
 }
-.menu-restaurant section {
+.menu-restaurant .menu-restaurant {
   padding-left: 10px;
   background: #fbfbfb;
   border-top-left-radius: 30px;
@@ -320,10 +354,24 @@ ol li .purple-icon {
   justify-content: space-between;
   padding: 0px 20px 0px 20px;
 }
-.entete .fa-lg {
-  -webkit-text-stroke: 1px white;
+.entete .heart {
   font-size: 1.4rem;
-  padding: 8px;
+  margin-top: -6px;
+}
+.entete .heart .fa-stack-1x {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 500ms linear;
+  color: #9356DC;
+}
+.entete .heart .fa-stack-2x {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px white;
+  margin-top: 10.5px;
+}
+.entete .heart:hover .fa-stack-1x {
+  visibility: visible;
+  opacity: 1;
 }
 
 /*cartes plats pages menu*/
@@ -349,6 +397,11 @@ ol li .purple-icon {
 .left-section {
   width: 100%;
   padding: 10px;
+}
+.left-section h4 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .left-section .course-description {
   padding-top: 5px;
@@ -384,6 +437,19 @@ ol li .purple-icon {
 .bouton-commander {
   text-align: center;
   margin-top: 40px;
+}
+
+@media all and (min-width: 950px) {
+  .courses {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  ul li {
+    width: 320px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
