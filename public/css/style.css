@@ -84,7 +84,6 @@ h4 {
 }
 
 .menu-restaurant h3 {
-  padding-top: 35px;
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 300;
@@ -111,6 +110,8 @@ h4 {
 
 /*Layout imports*/
 footer {
+  max-width: 1400px;
+  margin: 0 auto;
   color: white;
   background-color: #353535;
   padding: 20px 0px 40px 20px;
@@ -184,11 +185,18 @@ section {
 
 /*Pages imports*/
 .location {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   background: #eaeaea;
   height: 50px;
   padding-top: 15px;
   box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.247);
+}
+.location div {
+  display: flex;
+}
+.location div i {
+  margin-right: 10px;
 }
 
 .hat {
@@ -297,12 +305,14 @@ ol li .fa-lg {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 500ms linear;
-  color: #9356DC;
+  background: linear-gradient(to bottom, #e872da, #a55bdb);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .resultcard figcaption .heart .fa-stack-2x {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   -webkit-text-stroke: 1px white;
-  margin-top: 10.5px;
+  margin-top: 11px;
 }
 .resultcard figcaption .heart:hover .fa-stack-1x {
   visibility: visible;
@@ -310,6 +320,11 @@ ol li .fa-lg {
 }
 
 @media all and (min-width: 950px) {
+  #blocpage {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
   ol {
     display: flex;
   }
@@ -362,12 +377,15 @@ ol li .fa-lg {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 500ms linear;
-  color: #9356DC;
+  background: linear-gradient(to bottom, #e872da, #a55bdb);
+  cursor: pointer;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .entete .heart .fa-stack-2x {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   -webkit-text-stroke: 1px white;
-  margin-top: 10.5px;
+  margin-top: 11.5px;
 }
 .entete .heart:hover .fa-stack-1x {
   visibility: visible;
@@ -375,6 +393,24 @@ ol li .fa-lg {
 }
 
 /*cartes plats pages menu*/
+.courses section {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .course-card {
   display: flex;
   justify-content: space-between;
@@ -389,6 +425,9 @@ ol li .fa-lg {
 }
 .course-card:hover .right-section {
   margin-right: 0;
+}
+.course-card:hover .right-section i {
+  transform: rotate(360deg);
 }
 .course-card:hover .left-section {
   width: 80%;
@@ -433,6 +472,9 @@ ol li .fa-lg {
   margin-right: -80px;
   transition: all 0.4s;
 }
+.right-section i {
+  transition: all 0.4s;
+}
 
 .bouton-commander {
   text-align: center;
@@ -445,6 +487,10 @@ ol li .fa-lg {
     justify-content: space-evenly;
     width: 100%;
     margin-top: 20px;
+  }
+
+  .course-card:hover .left-section {
+    width: 70%;
   }
 
   ul li {

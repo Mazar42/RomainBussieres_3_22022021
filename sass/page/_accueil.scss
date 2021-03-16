@@ -1,9 +1,18 @@
 .location{
-    text-align: center;
+    display: flex;
+    justify-content: center;
     background: $location-bg-color;
     height: 50px;
     padding-top: 15px;
     box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.247);
+
+    div{
+        display: flex;
+
+        i{
+            margin-right: 10px;
+        }
+    }
 }
 
 .hat{
@@ -126,14 +135,16 @@
                 visibility: hidden;
                 opacity: 0;
                 transition: visibility 0s, opacity 500ms linear;
-                color: $primary-color;
+                background: $button-color;
+                -webkit-background-clip: text;
+                color: transparent;
                 
             }
 
             .fa-stack-2x{
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 -webkit-text-stroke: 1px white;
-                margin-top: 10.5px;
+                margin-top: 11px;
             }
 
             &:hover .fa-stack-1x{
@@ -146,6 +157,11 @@
 }
 
 @media all and (min-width : 950px){
+
+    #blocpage{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
 
     ol{
         display: flex;

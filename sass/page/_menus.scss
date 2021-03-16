@@ -38,14 +38,17 @@
             visibility: hidden;
             opacity: 0;
             transition: visibility 0s, opacity 500ms linear;
-            color: $primary-color;
+            background: $button-color;
+            cursor: pointer;
+            -webkit-background-clip: text;
+            color: transparent;
             
         }
 
         .fa-stack-2x{
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             -webkit-text-stroke: 1px white;
-            margin-top: 10.5px;
+            margin-top: 11.5px;
         }
 
         &:hover .fa-stack-1x{
@@ -56,7 +59,23 @@
     }
 }
 /*cartes plats pages menu*/
-
+.courses{
+    section {
+    
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari et Chrome */
+        -o-animation: fadein 2s; /* Opera */
+    }
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+}
 .course-card {
         display: flex;
         justify-content: space-between;
@@ -71,10 +90,14 @@
          
         &:hover .right-section {
             margin-right: 0;
+
+            i{
+            transform: rotate(360deg);
+            }
         }
 
         &:hover .left-section {
-            width: 80%;
+            width: 80%;     
         }
     }
 
@@ -121,6 +144,10 @@
     width: 80px;
     margin-right: -80px;
     transition: all 0.4s;
+
+    i{
+        transition: all 0.4s;
+    }
 }
 
 .bouton-commander{
@@ -137,10 +164,15 @@
         margin-top: 20px;
     }
 
+    .course-card{
+        &:hover .left-section{
+            width: 70%;
+        }
+    }
+
     ul{
         li{
         width: 320px;
         }
     }
-
 }
