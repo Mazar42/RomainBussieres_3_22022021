@@ -123,7 +123,7 @@ h4 {
 /*components imports*/
 .btnstyle {
   border-radius: 100px;
-  background: linear-gradient(to bottom, #e872da, #a55bdb);
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
   padding: 15px 25px;
   border-style: hidden;
@@ -132,7 +132,7 @@ h4 {
 
 .btnstyle-order {
   border-radius: 100px;
-  background: linear-gradient(to bottom, #e872da, #a55bdb);
+  background: linear-gradient(to bottom, #FF79DA, #9356DC);
   color: white;
   padding: 15px 50px;
   border-style: hidden;
@@ -146,7 +146,7 @@ h4 {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 500ms linear;
-  background: linear-gradient(to bottom, #e872da, #a55bdb);
+  background: linear-gradient(to top, #FF79DA, #9356DC);
   background-clip: border-box;
   cursor: pointer;
   -webkit-background-clip: text;
@@ -343,6 +343,7 @@ ol li .fa-lg {
 }
 
 .resultcard {
+  position: relative;
   background-color: white;
   border-radius: 10px;
   padding: 0px 0px 5px 0px;
@@ -357,6 +358,14 @@ ol li .fa-lg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   height: 175px;
+}
+.resultcard .imgresult span {
+  position: absolute;
+  transform: translate(-120%, 50%);
+  padding: 5px 10px;
+  background-color: #99E2D0;
+  color: #278870;
+  text-align: center;
 }
 .resultcard .imgresult img {
   object-fit: cover;
@@ -522,10 +531,10 @@ ol li .fa-lg {
   padding-top: 20px;
   width: 80px;
   margin-right: -80px;
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 .right-section i {
-  transition: all 0.2s;
+  transition: all 0.4s;
 }
 
 .bouton-commander {

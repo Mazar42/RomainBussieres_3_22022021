@@ -7,4 +7,5 @@ $light-bg-color: #f6f6f6;
 $location-bg-color: #eaeaea;
 $price-color: #424242;
 
-$button-color: linear-gradient(to bottom,#e872da ,#a55bdb);
+$button-color: linear-gradient(to bottom, $secondary-color ,$primary-color);
+$heart-color : linear-gradient(to top, $secondary-color ,$primary-color);

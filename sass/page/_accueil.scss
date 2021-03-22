@@ -116,6 +116,7 @@
  }
 
 .resultcard{
+    position: relative;
     background-color: white;
     border-radius: 10px;
     padding: 0px 0px 5px 0px;
@@ -130,6 +131,15 @@
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         height: 175px;
+
+        span{
+            position: absolute;
+            transform: translate(-120%, 50%);
+            padding: 5px 10px;
+            background-color: $tertiary-color;
+            color: darken($tertiary-color, 40%);
+            text-align: center;
+        }
     }
 
     .imgresult img{
