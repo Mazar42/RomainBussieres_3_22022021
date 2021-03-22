@@ -1,7 +1,7 @@
 .menu-restaurant{
     margin-top: -20px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
     background-color:white;
     padding-top: 25px;
 
@@ -9,6 +9,36 @@
         font-weight: bold;
     }
     
+    ul{
+        li:nth-child(1)
+        {
+            animation: fadein 1.8s;
+            -moz-animation: fadein 1.8s; /* Firefox */
+            -webkit-animation: fadein 1.8s; /* Safari et Chrome */
+            -o-animation: fadein 1.8s; /* Opera */
+        }
+        li:nth-child(2)
+        {
+            animation: fadein 2.2s;
+            -moz-animation: fadein 2.2s; /* Firefox */
+            -webkit-animation: fadein 2.2s; /* Safari et Chrome */
+            -o-animation: fadein 2.2s; /* Opera */
+        }
+        li:nth-child(3)
+        {
+            animation: fadein 2.6s;
+            -moz-animation: fadein 2.6s; /* Firefox */
+            -webkit-animation: fadein 2.6s; /* Safari et Chrome */
+            -o-animation: fadein 2.6s; /* Opera */
+        }
+        li:nth-child(4)
+        {
+            animation: fadein 3s;
+            -moz-animation: fadein 3s; /* Firefox */
+            -webkit-animation: fadein 3s; /* Safari et Chrome */
+            -o-animation: fadein 3s; /* Opera */
+        }
+    }
 
     li {
         .left-section{
@@ -16,66 +46,20 @@
             flex-direction: column;
         }
     }
-    .menu-restaurant {
-            padding-left: 10px;
-            background: rgb(251, 251, 251);
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-    }     
+        
 }
 
 .entete {
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 25px 20px;
 
     .heart{
-
-        font-size: 1.4rem;
         margin-top: -6px;
-
-        .fa-stack-1x{
-            visibility: hidden;
-            opacity: 0;
-            transition: visibility 0s, opacity 500ms linear;
-            background: $button-color;
-            cursor: pointer;
-            -webkit-background-clip: text;
-            color: transparent;
-            
-        }
-
-        .fa-stack-2x{
-            font-size: 1.4rem;
-            -webkit-text-stroke: 1px white;
-            margin-top: 11.5px;
-        }
-
-        &:hover .fa-stack-1x{
-                visibility: visible;
-                opacity: 1;
-    
-        }
     }
 }
 /*cartes plats pages menu*/
-.courses{
-    section {
-    
-        animation: fadein 2s;
-        -moz-animation: fadein 2s; /* Firefox */
-        -webkit-animation: fadein 2s; /* Safari et Chrome */
-        -o-animation: fadein 2s; /* Opera */
-    }
-    @keyframes fadein {
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-}
+
 .course-card {
         display: flex;
         justify-content: space-between;
@@ -97,7 +81,11 @@
         }
 
         &:hover .left-section {
-            width: 80%;     
+            width: 70%;     
+        }
+
+        &:hover .price {
+            margin-right: -24px;
         }
     }
 
@@ -143,10 +131,10 @@
     padding-top: 20px;
     width: 80px;
     margin-right: -80px;
-    transition: all 0.4s;
+    transition: all 0.2s;
 
     i{
-        transition: all 0.4s;
+        transition: all 0.2s;
     }
 }
 
@@ -165,8 +153,8 @@
     }
 
     .course-card{
-        &:hover .left-section{
-            width: 70%;
+        &:hover .price{
+            margin-right: -10px;
         }
     }
 

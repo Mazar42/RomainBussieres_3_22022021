@@ -2,9 +2,7 @@
 
 @import "./utils/reset.scss";
 @import "./utils/variables";
-@import "./utils/fonctions";
-@import "./utils/mixins";
-@import "./utils/placeholders";
+@import "./utils/keyframes";
 
 /* base imports*/
 
@@ -14,6 +12,7 @@
 /*components imports*/
 
 @import "./components/buttons";
+@import "./components/hearts";
 
 /*Layout imports*/
 

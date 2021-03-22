@@ -6,14 +6,18 @@
         visibility: hidden;
         opacity: 0;
         transition: visibility 0s, opacity 500ms linear;
-        color: $primary-color;
+        background: $button-color;
+        background-clip: border-box;
+        cursor: pointer;
+        -webkit-background-clip: text;
+        color: transparent;
         
     }
 
     .fa-stack-2x{
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         -webkit-text-stroke: 1px white;
-        margin-top: 10.5px;
+        margin-top: 11.5px;
     }
 
     &:hover .fa-stack-1x{
