@@ -209,6 +209,13 @@ section {
   margin-bottom: 40px;
 }
 
+.courses section {
+  height: 260px;
+}
+.courses .entree-note-enchantee {
+  height: 340px;
+}
+
 .img-header-palette-du-gout {
   background-image: url("../../pictures/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   width: 100%;
@@ -409,14 +416,27 @@ ol li .fa-lg {
   }
 }
 .menu-restaurant {
-  margin-top: -20px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   background-color: white;
   padding-top: 25px;
+  margin-top: -20px;
 }
 .menu-restaurant h5 {
   font-weight: bold;
+}
+.menu-restaurant h3 {
+  position: relative;
+  display: inline-block;
+}
+.menu-restaurant h3::after {
+  content: "";
+  height: 3px;
+  width: 50%;
+  background-color: #99E2D0;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
 }
 .menu-restaurant ul li:nth-child(1) {
   animation: fadein 1.8s;

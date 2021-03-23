@@ -1,15 +1,32 @@
 .menu-restaurant{
-    margin-top: -20px;
+    
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
     background-color:white;
     padding-top: 25px;
+    margin-top: -20px;
 
     h5 {
         font-weight: bold;
     }
+
+    h3{
+        position: relative;
+        display: inline-block;
+    }
+
+    h3::after{
+        content: "";
+        height: 3px;
+        width: 50%;
+        background-color: $tertiary-color;
+        position: absolute;
+        left: 20px;
+        bottom: 0;
+    }
     
     ul{
+
         li:nth-child(1)
         {
             animation: fadein 1.8s;
