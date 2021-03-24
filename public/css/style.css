@@ -127,7 +127,28 @@ h4 {
   color: white;
   padding: 15px 25px;
   border-style: hidden;
+  cursor: pointer;
   box-shadow: -6px 6px 13px 0px rgba(0, 0, 0, 0.247);
+  position: relative;
+  z-index: 1;
+}
+.btnstyle:hover {
+  box-shadow: -6px 6px 6px 0px rgba(0, 0, 0, 0.247);
+}
+.btnstyle:hover .btn-hover {
+  opacity: 1;
+}
+.btnstyle .btn-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  border-radius: 100px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 200ms;
 }
 
 .btnstyle-order {
@@ -136,7 +157,28 @@ h4 {
   color: white;
   padding: 15px 50px;
   border-style: hidden;
+  cursor: pointer;
   box-shadow: -6px 6px 13px 0px rgba(0, 0, 0, 0.247);
+  position: relative;
+  z-index: 1;
+}
+.btnstyle-order:hover {
+  box-shadow: -6px 6px 6px 0px rgba(0, 0, 0, 0.247);
+}
+.btnstyle-order:hover .btn-hover {
+  opacity: 1;
+}
+.btnstyle-order .btn-hover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, #ff93e1, #a16be0);
+  border-radius: 100px;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 200ms;
 }
 
 .heart {
